@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A SharePoint Applicatoin built using AngularJS, Bootstrap, and BreezeJS">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>ShareWeather: A demo app using AngularJS and SharePoint</title>
+
+    <!-- Bootstrap CSS - Uncomment to use CDNs for Production -->
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+
+    <!-- Bootstrap CSS - Local copy for development. Comment out or remove and use CDN for production -->
+    <!--<link rel="stylesheet" href="vendor/bootstrap/bootstrap-3.2.0/css/bootstrap.min.css" />-->
+
+    <!--<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootswatch/3.2.0/flatly/bootstrap.min.css"/>-->
+    
+    
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Vendor CSS -->
+    <link rel="stylesheet" href="vendor/animatecss/animate.css" />
+
+    <!-- App CSS -->
+    <link rel="stylesheet" href="css/app.css" />
+
+</head>
+<body>
+    
+    <div>
+        
+        <!-- Routes inserted here -->
+        <div ng-view=""></div>
+
+    </div>
+
+    <!-- Angular JS - Uncomment to use CDNs for Production-->
+    <!--
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.13/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.13/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.0-beta.13/angular-animate.min.js"></script>
+    -->
+    <!-- Angular JS - Local copies for development. Comment out or remove and use CDNs for production -->
+    <script src="vendor/angular/angular-1.3.0-beta.13/angular.min.js"></script>
+    <script src="vendor/angular/angular-1.3.0-beta.13/angular-route.min.js"></script>
+    <script src="vendor/angular/angular-1.3.0-beta.13/angular-animate.min.js"></script>
+    <script src="vendor/angular/angular-1.3.0-beta.13/angular-resource.min.js"></script>
+    <script src="vendor/angular/angular-1.3.0-beta.13/angular-sanitize.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.11.0/ui-bootstrap.js"></script>
+    <!-- Breeze -->
+    <script src="vendor/breeze/breeze-1.4.13/q.js"></script>
+    <script src="vendor/breeze/breeze-1.4.13/breeze.debug.js"></script>
+    <script src="vendor/breeze/breeze-1.4.13/Labs/breeze.metadata-helper.js"></script>
+    <script src="vendor/breeze/breeze-1.4.13/Labs/breeze.labs.dataservice.abstractrest.js"></script>
+    <script src="vendor/breeze/breeze-1.4.13/Labs/breeze.labs.dataservice.sharepoint.js"></script>
+
+    <!-- App JS -->
+    <script src="js/app.js"></script>
+    <script src="js/services/services.js"></script>
+    <script src="js/controllers/controllers.js"></script>
+    <script src="js/filters/filters.js"></script>
+    <script src="js/directives/directives.js"></script>
+
+</body>
+</html>

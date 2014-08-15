@@ -1,0 +1,148 @@
+<style>
+    .boxTitle {
+        padding-left: 15px;
+    }
+</style>
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">ShareWeather</a>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" data-ng-model="SearchTerm" placeholder="Search">
+                </div>
+                <button type="submit" data-ng-click="searchWeather()" class="btn btn-default">Submit</button>
+            </form>
+            <p class="navbar-text navbar-right"><a href="../Lists/Favorites" target="_blank" class="navbar-link">SharePoint List</a></p>
+
+        </div>
+
+
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>ShareWeather</h1>
+            <p>ShareWeather is a demo app that utilizes the World Weather Online API to pull in weather data for the user specified city. The following app utilizes SharePoint as it's hosting infrastructure with AngularJS and Bootstrap on the client.</p>
+        </div>
+    </div>
+    <h2>Search Results:</h2>
+    <div class="row">
+        <div class="col-sm-8">
+            <div style="font-size:x-large">Weather for {{weather.request[0].query}}</div>
+        </div>
+        <!--Favorites Buttons-->
+        <!--<div class="col-sm-4">
+            <button class=" btn pull-right" data-ng-click="AddFavorite()"><span class="glyphicon glyphicon-star "> Favorite</span></button>
+            <div class="btn-group pull-right" dropdown is-open="status.isopen">
+                <button type="button" class="btn btn-primary dropdown-toggle" ng-disabled="disabled">
+                    Favorites <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li ng-repeat="favorite in favorites"><a data-ng-click="setSearchTerm(favorite.Title)">{{favorite.Title}}</a></li>
+                </ul>
+            </div>
+        </div>-->
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="row">
+                <h4 class="boxTitle">Current Weather</h4>
+                <div class="col-sm-2">
+                    <img src="{{weather.current_condition[0].weatherIconUrl[0].value}}" />
+                </div>
+                <div class="col-sm-10">
+
+                    <div>
+                        Current Temperature:{{weather.current_condition[0].temp_F}}
+                    </div>
+                    <div>
+                        Description: {{weather.current_condition[0].weatherDesc[0].value}}
+                    </div>
+
+                    <div>
+                        Today's High: {{weather.weather[0].tempMaxF}}
+                    </div>
+                    <div>
+                        Today's Low: {{weather.weather[0].tempMinF}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <h4 class="boxTitle">Tommorow's Weather</h4>
+            <div class="col-sm-2">
+                <img src="{{weather.weather[1].weatherIconUrl[0].value}}" />
+            </div>
+            <div class="col-sm-4">
+
+                <div>
+                    Description: {{weather.weather[1].weatherDesc[0].value}}
+                </div>
+
+                <div>
+                    Tomorrow's High: {{weather.weather[1].tempMaxF}}
+                </div>
+                <div>
+                    Tomorrow's Low: {{weather.weather[1].tempMinF}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2>Weather In Your Favorite Cities</h2>
+    <!--Favorites Section-->
+    <div class="row" ng-repeat="favorite in favoritesWeather">
+        <div class="col-sm-6">
+           
+            <div class="row">
+                <h4 class="boxTitle">Current Weather in {{favorite.request[0].query}}</h4>
+                <div class="col-sm-2">
+                    <img src="{{favorite.current_condition[0].weatherIconUrl[0].value}}" />
+                </div>
+                <div class="col-sm-4">
+                    <div>
+                        Current Temperature:{{favorite.current_condition[0].temp_F}}
+                    </div>
+                    <div>
+                        Description: {{favorite.current_condition[0].weatherDesc[0].value}}
+                    </div>
+
+                    <div>
+                        Today's High: {{favorite.weather[0].tempMaxF}}
+                    </div>
+                    <div>
+                        Today's Low: {{favorite.weather[0].tempMinF}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <h4 class="boxTitle">Tommorow's Weather</h4>
+
+            <div class="col-sm-2">
+                <img src="{{favorite.weather[1].weatherIconUrl[0].value}}" />
+            </div>
+            <div class="col-sm-4">
+                <div>
+                    Description: {{favorite.weather[1].weatherDesc[0].value}}
+                </div>
+
+                <div>
+                    Tomorrow's High: {{favorite.weather[1].tempMaxF}}
+                </div>
+                <div>
+                    Tomorrow's Low: {{favorite.weather[1].tempMinF}}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
