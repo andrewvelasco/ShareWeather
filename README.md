@@ -1,7 +1,7 @@
-SPAngularAppStarter
-===================
+ShareWeather===================
 
-This is a Visual Studio solution intended to expedite the creation of SharePoint 2013 Applications built with AngularJS. Inspiration was taken from [ngbp]( https://github.com/ngbp/ngbp ), [angular-seed](https://github.com/angular/angular-seed), [angular-app](https://github.com/angular-app/angular-app), [BreezeSP2013Sample](https://github.com/andrewconnell/BreezeSP2013Sample) and others.
+
+This is a SharePoint Hosted App Visual Studio solution that calls the world weather online api built with AngularJS. Inspiration was taken from [ngbp]( https://github.com/ngbp/ngbp ), [angular-seed](https://github.com/angular/angular-seed), [angular-app](https://github.com/angular-app/angular-app), [BreezeSP2013Sample](https://github.com/andrewconnell/BreezeSP2013Sample) and others.
 
 Installed and ready to rumble
 -------------------
